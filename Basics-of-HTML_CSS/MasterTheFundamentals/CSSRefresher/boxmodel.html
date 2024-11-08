@@ -1,0 +1,39 @@
+<!--  BOX MODEL
+
+The box model is a fundamental concept in CSS that defines how elements are displayed on a web page. It is basically a layer for contents in webpages.
+
+Let us suppose there is a div, we have a content in a div. The div has a visible border.
+Padding is the space between the border and content.
+Margin is the space between elements, or we can understand as external padding around a element which separates the content from other contents. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      /* total width: w: 200px + p: 20px + border: 10px  */
+      #container {
+        box-sizing: content-box; /*default*/
+        width: 200px;
+        padding: 10px;
+        border: 5px solid black;
+        margin: 10px;
+      }
+      /* total width: w: 200px */
+      /* using border-box we set the total width calculating the border and padding too. */
+      div {
+        box-sizing: border-box; /*default*/
+        width: 230px;
+        padding: 10px;
+        border: 5px solid black;
+        margin: 10px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">Content</div>
+    <div>Content</div>
+  </body>
+</html>

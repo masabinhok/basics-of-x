@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="form.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="name">
+        Name:
+        <input
+          required
+          minlength="3"
+          id="name"
+          name="name"
+          type="text"
+          placeholder="for e.g., Sabin Shrestha"
+        />
+      </label>
+      <label for="email">
+        Email:
+        <input
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          id="email"
+          type="email"
+          placeholder="for e.g., example@example.com"
+          name="email"
+        />
+      </label>
+      <label for="password">
+        Password:
+        <input
+          id="password"
+          required
+          placeholder="password123"
+          type="password"
+          name="password"
+        />
+      </label>
+      <label for="phone">
+        Phone:
+        <input
+          pattern="[\+]?[0-9]{1,4}[\s\-]?[0-9]{6,12}"
+          id="phone"
+          placeholder="9848930381"
+          type="tel"
+        />
+      </label>
+      <label for="age">
+        Age:
+        <input
+          id="age"
+          name="age"
+          min="0"
+          max="100"
+          placeholder="19"
+          type="number"
+        />
+      </label>
+      <label for="dob">
+        DOB:
+        <input id="dob" type="date" min="1900-01-01" max="2024-12-31" />
+      </label>
+      <label for="gender">
+        Gender:
+        <select name="gender" id="gender">
+          <option value="default" disabled selected>Select your Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

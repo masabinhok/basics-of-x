@@ -1,0 +1,98 @@
+/* universal selector */
+* {
+  color: aqua;
+}
+
+/* type selector */
+p {
+  font-size: 16px;
+}
+
+/* class selector */
+.button {
+  background-color: blue;
+}
+
+/* id selector */
+#header {
+  background-color: gray;
+}
+
+/* attribute selectors */
+[type="text"] {
+  border: 1px solid black;
+}
+
+/* 
+  [attr^="value"]: selects elements whose attribute starts with the specified value.
+  [attr$="value"]: selects elements whose attribute ends with the specified value.
+  [attr*="value"]: selects elements whose attribute contains the specified value.
+*/
+
+/* elements whose attributes starts with https:// are selected */
+[href="https://"]
+{
+  color: green;
+}
+
+/* combinator selectors */
+/* nested: div vitra span raixa vane */
+div span {
+  color: orange;
+}
+
+/* child: selects the child of an element */
+ul > li {
+  list-style-type: square;
+}
+
+/* adjacent siblings: yedi h2 paxi p aauxa vane as  a sibling it selects that */
+h2 + p {
+  font-style: italic;
+}
+
+/* general sibling: sabbai sibling lai select garxa */
+h2 ~ p {
+  color: purple;
+}
+
+/* pseudo classes: define special state of an element preceded by a colon */
+/* hover */
+a:hover {
+  color: red;
+}
+
+/* active */
+a:active {
+  background-color: yellow;
+}
+
+/* focus */
+input:focus {
+  border: 2px solid blue;
+}
+
+/* nth-child(): selects elements based on their position in a parent. */
+li:nth-child(2) {
+  background-color: lightgray;
+}
+
+/* similarly, :first-child, :last-child, :nth-of-type() */
+
+/* pseudo elements */
+/* ::before */
+p::before {
+  content: "->";
+}
+
+p::after {
+  content: "<-";
+}
+
+p::first-letter {
+  color: white;
+}
+
+p::first-line {
+  background-color: gray;
+}

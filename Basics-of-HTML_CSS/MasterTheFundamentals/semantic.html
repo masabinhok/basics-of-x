@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master the Fundamentals - HTML/CSS</title>
+  </head>
+  <body>
+    <!--  Semantic HTML -->
+
+    <!-- header represents the introductory content or set of navigational links, typically at the top of a page or a section. -->
+    <header>
+      <h1>Semantic HTML</h1>
+      <!-- nav denotes a section of the document meant for navigation links -->
+      <nav>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <!-- aside contains content tangentially related to the main content -->
+    <aside>
+      <nav>
+        <a href="https://github.com/masabinhok">Github</a>
+        <a href="https://www.linkedin.com/in/sabinshresthaa">Linkedin</a>
+        <a href="https://www.x.com/masabinhok">Twitter</a>
+      </nav>
+    </aside>
+    <main>
+      <!-- section defines group of content, used to break the document into manageable parts -->
+      <section id="about">
+        <!-- article represents a self-contained piece of content that could be distributed and reused. -->
+        <article>
+          <h2>About me</h2>
+          <p>
+            Hi I am Sabin Shrestha. I am currently revisiting the fundamentals
+            of HTML and CSS.
+          </p>
+        </article>
+      </section>
+      <section id="contact">
+        <header>
+          <h2>Contact Me</h2>
+          <p>
+            Feel free to reach out via email or connect with me on social media.
+          </p>
+        </header>
+        <main>
+          <form>
+            <label for="email">
+              Email:
+              <input
+                required
+                id="email"
+                name="email"
+                aria-describedby="Your valid email address"
+                type="email"
+              />
+            </label>
+            <button type="submit">Submit</button>
+          </form>
+        </main>
+      </section>
+      <section>
+        <div contenteditable="true">
+          Editable Content, click on me and you can edit yourself.
+        </div>
+      </section>
+    </main>
+    <!-- footer marks the footer for a page or section and typically contains metadata like authorship or related links -->
+    <footer>
+      <p>&copy; 2024 Sabin Shrestha, Last updated at 3:51 AM 8 Nov 2024</p>
+    </footer>
+  </body>
+</html>

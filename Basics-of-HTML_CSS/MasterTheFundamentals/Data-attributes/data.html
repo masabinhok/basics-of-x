@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    div[data-status="active"] {
+      color: green;
+    }
+    div[data-status="inactive"] {
+      color: red;
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Attributes</title>
+  </head>
+  <body>
+    <div id="status" data-status="active">Status</div>
+    <button id="toggle">Toggle</button>
+    <div data-user-id="1" data-role="admin">Sabin Shrestha</div>
+    <button id="btn" data-action="submit" data-id="1">Click Me</button>
+  </body>
+  <script>
+    const button = document.getElementById("btn");
+    console.log("Action: ", button.dataset.action);
+    console.log("Id: ", button.dataset.id);
+    button.dataset.action = "sabin";
+    button.dataset.id = "69";
+    button.dataset.sbn = "SABIN";
+
+    //toggle feature
+    const toggleButton = document.getElementById("toggle");
+    const statusDiv = document.getElementById("status");
+
+    toggleButton.addEventListener("click", () => {
+      console.log("clicked");
+      statusDiv.dataset.status === "active"
+        ? (statusDiv.dataset.status = "inactive")
+        : (statusDiv.dataset.status = "active");
+    });
+  </script>
+</html>

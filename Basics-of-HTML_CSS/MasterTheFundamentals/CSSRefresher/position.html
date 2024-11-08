@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      main {
+        height: 10000px;
+        width: 100vw;
+      }
+
+      #sticky {
+        position: sticky;
+        top: 0px;
+        padding: 20px;
+      }
+
+      #relative {
+        border: 2px solid black;
+        padding: 10px;
+        position: relative;
+        height: 100px;
+        width: 400px;
+        left: 20px;
+        top: 100px;
+      }
+
+      #absolute {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+      }
+
+      #fixed {
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Positions: absolute, relative, fixed, static, sticky,  -->
+    <main>
+      <div id="static">
+        Static: Default position and follows the normal document workflow.
+      </div>
+      <div id="relative">
+        <div id="absolute">
+          I am absolute div: relative to a parent div which is relative itself.
+        </div>
+      </div>
+      <div id="fixed">Views: 69</div>
+      <nav id="sticky">
+        <a href="https://github.com">Github</a>
+        <a href="https://x.com">Twitter</a>
+      </nav>
+    </main>
+  </body>
+</html>
